@@ -2,7 +2,7 @@ name: 'Add card to project'
 description: 'just add issue or pr to github project'
 inputs:
   githubToken:
-    description: 'Person Access Token()'
+    description: 'Person Access Token(repo, project)'
     required: true
   issueId:
     description: 'issue id or pr id'
@@ -12,6 +12,9 @@ inputs:
     required: true
   ownerName:
     description: 'specific owner name. like stNamco'
+    required: true
+  repositoryName:
+    description: 'repository name'
     required: true
   projectNumber:
     description: 'project number.'
