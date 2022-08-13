@@ -1,0 +1,24 @@
+name: 'Add card to project'
+description: 'just add issue or pr to github project'
+inputs:
+  githubToken:
+    description: 'Person Access Token()'
+    required: true
+  issueId:
+    description: 'issue id or pr id'
+    required: true
+  ownerType:
+    description: 'owner type. user or organization'
+    required: true
+  ownerName:
+    description: 'specific owner name. like stNamco'
+    required: true
+  projectNumber:
+    description: 'project number.'
+    required: true
+outputs:
+  itemId:
+    description: 'card id'
+runs:
+  using: 'node16'
+  main: 'index.js'
