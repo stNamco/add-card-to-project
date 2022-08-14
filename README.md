@@ -17,15 +17,6 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - name: Example create PR action
-        id: createPullrequest
-        uses: peter-evans/create-pull-request@v4
-        with:
-          base: main
-          branch-suffix: timestamp
-          title: Example 
-          assignees: ${{ github.actor }}
-          body: example text
       - uses: stNamco/add-card-to-project@v0.0.1
         with:
           githubToken: ${{secrets.EXAMPLE_PAT}}
@@ -33,7 +24,7 @@ jobs:
           ownerName: stNamco
           projectNumber: 6
           repositoryName: example-issues
-          issueId: ${{ steps.createPullrequest.outputs.pull-request-number }}
+          issueId: ${{ github.event.issue.number }}
 ```
 
 
