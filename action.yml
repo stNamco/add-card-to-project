@@ -24,4 +24,4 @@ outputs:
     description: 'card id'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
